@@ -1,11 +1,19 @@
+"""
+@author: patrick_alan
+@created_date: 14/08/2022
+"""
+
 from urllib3 import PoolManager
 import json
 from Config.Postgre import PostgreConfig
 from Connections.Postgre import PostgreConnection
 from datetime import datetime
 
+###########################
+# Instanciando configurações
 https = PoolManager()
 post_conn = PostgreConnection(PostgreConfig('db_etl'))
+###########################
 
 
 def request_transactions():

@@ -1,3 +1,8 @@
+"""
+@author: patrick_alan
+@created_date: 14/08/2022
+"""
+
 from fastapi import FastAPI
 import ccard
 from faker import Faker
@@ -7,8 +12,11 @@ from Connections.Postgre import PostgreConnection
 import random
 from time import time
 
+###########################
+# Instanciando configurações
 app = FastAPI()
 post_conn = PostgreConnection(PostgreConfig('db_etl'))
+###########################
 
 
 @app.get("/profile/")
